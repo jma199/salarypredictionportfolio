@@ -39,3 +39,4 @@ This data was checked for missing values and for outliers.
     - Using the IQR rule, five values in the salary variable were removed.
 
 For each numerical feature, two plots were made: a distribution plot and a plot that shows the dependency of salary on each feature
+

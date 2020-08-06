@@ -40,3 +40,38 @@ This data was checked for missing values and for outliers.
 
 For each numerical feature, two plots were made: a distribution plot and a plot that shows the dependency of salary on each feature
 
+Summary of features:
+    - Company ID : The salary is not dependent on the company
+    - Job Type : With increasing seniority, there is a positive correlation between job type and salary.
+    - Degree : Having a higher degree of education positively correlates with an increase in salary
+    - Major : Selecting the major of engineering, business, or math are correlated with higher salaries
+    - Industry : The oil and finance industries have higher salaries
+    - Years of Experience : There is a positive correlation between years of experience and salary
+    - Miles from metropolis : In general, salary decreases with increasing distance to a metropolis.
+
+Next, use label encoding to encode each category using salary average to replace the label. Now, using a correlation matrix, we can see the correlation coefficient of each feature with salary as well as with other features.
+
+### Establishing a baseline
+
+Before any advanced modeling, a baseline for determining what features will be established using linear regression. Using cross validation score and MSE as the scoring method, a baseline MSE of 400 was calculated.
+
+As a regression problem, other models that may be suitable to solving this problem are Random Forest and Gradient Boosted Regression.
+
+## Develop Model
+
+Using MSE as an evaluation metric, create and test several models, with a goal of achieving an MSE < 360.
+
+### Engineer Features
+
+Before modeling, the categorical features in the data sets were encoded using the one hot encoding method.
+
+## Create and Test Models
+
+In addition to Linear Regression, a second Linear Regression with data standard and principle component analysis for dimensionality reduction, Random Forest Regressor, and Gradient Boosting Regressor models were tested.
+
+For each model, the MSE was calculated. The model with the lowest MSE was determined to be the Gradient Boosting Regressor.
+
+The predicted values were stored in a .csv file.
+
+The important features constructed by the Gradient Boosting Regressor model were visualized and saved in a .csv file.
+
